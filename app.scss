@@ -1,0 +1,228 @@
+@import 'variables.scss';
+@import "_reset.scss";
+
+
+
+.app {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+
+
+    .functional-container {
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-rows: 60px auto;
+
+        .title {
+            color:white;
+            background-color: brown;
+            font-size:50px;
+        }
+
+        .rendered-view {
+
+            .functional-view {
+                position:relative;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                height: 100%;
+
+
+                .import {
+                    position:relative;
+                    display:grid;
+                    grid-gap:auto;
+                    justify-items:center; 
+                    background-color: burlywood;
+                    
+
+                    >input{
+                        border: 3px solid black;
+                        width:300px;
+                        height:35px;
+                        background-color: white;
+                        margin-top:30px;
+                    }
+
+                    >img {
+                        display: block;
+                        max-width:45vw;
+                        max-height:60vh;
+                        width: auto;
+                        height: auto;
+                      }
+
+                    >button{
+
+                        border: 3px solid black;
+                        width:100px;
+                        height:30px;
+                    }
+
+                }
+
+                .output {
+                    background-color:beige;
+                    color:red;
+                    display:grid;
+                    grid-template-columns:auto auto;
+                    grid-gap:20px; 
+                    text-align: center;
+
+                    &.loading {
+                        grid-template-columns:auto;
+                        justify-items:center;
+                        align-items:center;
+                    }
+                    
+                    
+                    .artist{
+                        color:brown;  
+                        margin-top:30px;   
+
+                        > p {
+                            margin-bottom: 12px;
+                        }
+                        
+                        >a {
+                            
+                            color: lightblue;
+                            text-decoration: none;
+                            font-size: 15px;
+                            background-color: darkblue;
+                            padding: 11px;
+                            white-space: nowrap;
+                            border-radius: 33px;
+                            margin-top: 12px;
+
+                            &:hover {
+                                color:white; 
+                            }
+                        
+                        }
+                    }
+          
+                }
+            }
+        }
+    }
+
+
+    .information-container{
+        height:100%;
+        background-color: rgb(250, 227, 191);
+
+        .title{
+            color:rgb(255, 136, 0);
+            font-size:50px; 
+
+        }
+
+        .rendered-view {
+            .information-view {
+                color:rgb(102, 13, 25);
+                display:grid;
+                grid-gap:50px;
+                grid-template-columns: 1fr 1fr 1fr;
+                margin:30px;
+
+                .block{
+
+                    width:200px;
+
+            }
+
+            
+            }
+        }
+
+    }
+}
+
+.lds-roller {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-roller div {
+    animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    transform-origin: 40px 40px;
+  }
+  .lds-roller div:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #fff;
+    margin: -4px 0 0 -4px;
+  }
+  .lds-roller div:nth-child(1) {
+    animation-delay: -0.036s;
+  }
+  .lds-roller div:nth-child(1):after {
+    top: 63px;
+    left: 63px;
+  }
+  .lds-roller div:nth-child(2) {
+    animation-delay: -0.072s;
+  }
+  .lds-roller div:nth-child(2):after {
+    top: 68px;
+    left: 56px;
+  }
+  .lds-roller div:nth-child(3) {
+    animation-delay: -0.108s;
+  }
+  .lds-roller div:nth-child(3):after {
+    top: 71px;
+    left: 48px;
+  }
+  .lds-roller div:nth-child(4) {
+    animation-delay: -0.144s;
+  }
+  .lds-roller div:nth-child(4):after {
+    top: 72px;
+    left: 40px;
+  }
+  .lds-roller div:nth-child(5) {
+    animation-delay: -0.18s;
+  }
+  .lds-roller div:nth-child(5):after {
+    top: 71px;
+    left: 32px;
+  }
+  .lds-roller div:nth-child(6) {
+    animation-delay: -0.216s;
+  }
+  .lds-roller div:nth-child(6):after {
+    top: 68px;
+    left: 24px;
+  }
+  .lds-roller div:nth-child(7) {
+    animation-delay: -0.252s;
+  }
+  .lds-roller div:nth-child(7):after {
+    top: 63px;
+    left: 17px;
+  }
+  .lds-roller div:nth-child(8) {
+    animation-delay: -0.288s;
+  }
+  .lds-roller div:nth-child(8):after {
+    top: 56px;
+    left: 12px;
+  }
+  @keyframes lds-roller {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
